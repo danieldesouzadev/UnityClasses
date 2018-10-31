@@ -1,6 +1,13 @@
 ﻿<Properties StartupConfiguration="{12D86537-BB30-79D9-667E-2A2DFBF78514}|">
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
-  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/NewMonoBehaviour.cs">
+    <Files>
+      <File FileName="Assets/Scripts/Player.cs" Line="68" Column="13" />
+      <File FileName="Assets/Scripts/GameManager.cs" Line="69" Column="19" />
+      <File FileName="Assets/Scripts/ScoreManager.cs" Line="1" Column="26" />
+      <File FileName="Assets/Scripts/NewMonoBehaviour.cs" Line="5" Column="2" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />

@@ -10,9 +10,6 @@ public class Player : MonoBehaviour {
     [SerializeField]
     private GameObject _ground;
 
-    [SerializeField]
-    private GameObject _cube;
-
     private float _moveSpeed;
 	private float _rotationSpeed;
 
@@ -69,7 +66,7 @@ public class Player : MonoBehaviour {
 
 		if (collision.gameObject.tag == "TagObstacle") {
 
-			particles.Play();
+            particles.Play();
 
 			Invoke("DisableParticles", 1);
 
@@ -77,22 +74,20 @@ public class Player : MonoBehaviour {
 
             _gameManager.UpdateScore();
 
-            CreateCube();
+        } else if (collision.gameObject.tag == "TagEvilObstacle") {
+
+            _rb.constraints = RigidbodyConstraints.FreezePositionZ;
+
+            _gameManager.gameOver();
+
+            _moveSpeed = 0;
+
+            DisableParticles();
         }
     }
 
-	void DisableParticles() {
+    void DisableParticles() {
 
         particles.Stop();
-	}
-
-    void CreateCube() {
-
-        float x = Random.Range(-100, 100);
-        float y = 1;
-        float z = Random.Range(-100, 100);
-        Vector3 pos = new Vector3(x, y, z);
-
-        Instantiate(_cube, pos, Quaternion.identity);
     }
 }
